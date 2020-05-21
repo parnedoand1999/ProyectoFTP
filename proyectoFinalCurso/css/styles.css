@@ -23,3 +23,7 @@ body{
 .cabecera{
 	background-color: black(49, 42, 42, 0.329);
 }
+.col-12{
+	margin-bottom: 5px;
+	margin-top: 20px;
+}

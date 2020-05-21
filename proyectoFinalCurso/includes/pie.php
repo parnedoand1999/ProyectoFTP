@@ -1,3 +1,5 @@
+
+<footer>
 <div class="jumbotron text-center bg-secondary " style="margin-bottom:0">
             <p>
                 ¡Gracias por su visita! Si desea Saber más sobre mosotros, clicke en este link: <a href="#">Sobre
@@ -20,6 +22,9 @@
             </div>
 
         </div>
+
+</footer>
+
 
 
 

@@ -49,35 +49,39 @@
 
 <body>
 
-           
+            <header>
                     <div class="jumbotron text-center bg-secondary" style="margin-bottom:0">
             
                         <div>
-                            <a href="index.html" tabindex="2"> <img id="logo" src="img/logo.jpg" alt="Pagina Principal" /> </a>
+                            <a href="index.php" tabindex="2"> <img id="logo" src="img/logo.jpg" alt="Pagina Principal" /> </a>
                         </div>
                         <p>¡No esperes más tiempo! Visite nuestra pagina web sobre la mejor saga de videojuegos de la historia!
                         </p>
                     </div>
             
-                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                        <a class="navbar-brand" href="#">Menú</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Información</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Tienda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Foro</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Registro</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+            <?php
+
+                    echo '  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+                    <a class="navbar-brand" href="#">Menú</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="info.php">Información</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Foro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Registro</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </nav> '
+            ?>
+            </header>

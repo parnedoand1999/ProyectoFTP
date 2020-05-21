@@ -2,7 +2,7 @@
 <?php
 include "includes/cabecera.php";
 ?>
-
+<main>
    <div id="hero-wrapper">
        <div class="carousel-wrapper"> 
            <div id="hero-carousel" class="carousel slide carousel-fade"> 
@@ -59,7 +59,7 @@ include "includes/cabecera.php";
           </p> 
 
     </div> 
-
+</main>
 
 <?php
 include "includes/pie.php";
