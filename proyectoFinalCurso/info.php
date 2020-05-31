@@ -203,8 +203,8 @@ include "includes/cabecera.php";
                <h2  class="historia">Juegos Principales De la Saga: </h2>
             </div >
 
-            <div class="col-md-4 text-center">
-                     <div class="card" style="width: 18rem;">
+            <div class="col-md-3 text-center">
+                     <div class="card" >
                      <img src="img/kh1.jpg" class="card-img-top" alt="KH1">
                      <div class="card-body">
                         <h5 class="card-title">Kingdom Hearth 1</h5>
@@ -214,8 +214,8 @@ include "includes/cabecera.php";
                      </div>
             </div>
 
-            <div class="col-md-4 text-center">
-                        <div class="card" style="width: 18rem;">
+            <div class="col-md-3 text-center">
+                        <div class="card" >
                         <img src="img/kh2.jpg" class="card-img-top" alt="KH2">
                         <div class="card-body">
                            <h5 class="card-title">Kingdom Hearth 2</h5>
@@ -227,8 +227,8 @@ include "includes/cabecera.php";
                         </div> 
             </div>
 
-            <div class="col-md-4 text-center">
-                        <div class="card" style="width: 18rem;">
+            <div class="col-md-3 text-center">
+                        <div class="card" >
                         <img src="img/kh3.jpg" class="card-img-top" alt="KH3">
                         <div class="card-body">
                            <h5 class="card-title">Kingdom Hearth 3</h5>

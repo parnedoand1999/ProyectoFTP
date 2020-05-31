@@ -44,6 +44,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <!--Java Script -->
+    <script src="js/javascript.js"></script>
+
 </head>
 
 
@@ -72,16 +76,17 @@
                                 <a class="nav-link" href="info.php">Información</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Tienda</a>
+                                <a class="nav-link" href="tienda.php">Tienda</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Foro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Registro</a>
+                                <a class="nav-link" href="iniciarsesion.php">Iniciar Sesión</a>
                             </li>
                         </ul>
                     </div>
                     </nav> '
             ?>
             </header>
+         
