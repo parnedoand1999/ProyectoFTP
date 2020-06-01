@@ -5,7 +5,7 @@ include "includes/cabecera.php";
 
 <main>
 
- <form >
+ <form action="login.php" method="POST">
 
   <div class="form-group row text-center">
     <label for="user" class="col-sm-2 col-form-label">Usuario</label>
@@ -32,10 +32,10 @@ include "includes/cabecera.php";
   </div>
   <div class="form-group row text-center">
     <div class="col-sm-5">
-      <button type="submit" class="btn btn-primary" id="iniciar" name="iniciar" onclick="comprobar()" >Iniciar Sesion</button>
+      <button type="submit" class="btn btn-primary" id="iniciar" name="iniciar" >Iniciar Sesion</button>
     </div>
     <div class="col-sm-5">
-      <a  href="registro.php" class="btn btn-primary" onclick="registro()">Crear cuenta</a>
+      <a  href="crearUsuario.php" class="btn btn-primary" onclick="registro()">Crear cuenta</a>
     </div>
   </div>
 </form>

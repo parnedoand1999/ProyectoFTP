@@ -1,52 +1,58 @@
 <?php
 include "includes/cabecera.php";
-?>
-<main class="container-fluid">
-<form action="conexion.php" method="post">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="usuario">Usuario</label>
-      <input type="text" class="form-control" id="usuario" name="usuario"  placeholder="Usuario">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="contrasena">Contraseña</label>
-      <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
-    </div>
-    <div class="form-group col-md-12">
-      <label for="email">Correo electronico</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com">
-    </div>
-  </div>
-  <div class="form-group col-md-12 ">
-    <label for="nombre">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Julian">
-  </div>
-  <div class="form-group col-md-12">
-    <label for="apellido">Apellido</label>
-    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Pérez">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-5">
-      <label for="ciudad">Ciudad</label>
-      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad">
-    </div>
+include "functions/connectDB.php";
 
-    <div class="form-group col-md-7">
-      <label for="postal">Código Postal</label>
-      <input type="text" class="form-control" id="postal" name="postal" placeholder="54780">
-    </div>
-  </div>
-  <div class="col-sm-12 " >
-      <div class="form-check">
- 
-        <input id="checkbox" class=" form-check-input " type="checkbox"> <label class=" form-check-label ml-4" for="checkbox" > Aceptar terminos y condiciones de registro</label>
+if(isset($_POST['crear']) ){
+    $user = $_POST["usuario"];
+    $pass = $_POST["contrasena"];
+    $em = $_POST["email"];
+    $name = $_POST["nombre"];
+    $ape = $_POST["apellido"];
+    $ciu = $_POST["ciudad"];
+    $post = $_POST["postal"];
+    
+}
+$insertarDatos = "INSERT INTO usuario VALUES('$user',  ' $em' , '$pass', '$name','$ape', '$ciu', '$post'  )";
 
-      </div>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary" id="crear" name="crear" value="crear">Crear Cuenta</button>
-</form>
-</main>
-<?php
+$ejecutarInsertar = mysqli_query($conexion,$insertarDatos );
+if(!$ejecutarInsertar){
+    echo "Error En la linea sql";
+}
+
+
+$consulta = "SELECT * FROM usuario";
+$ejecutarConsulta = mysqli_query($conexion , $consulta);
+$verFilas = mysqli_num_rows($ejecutarConsulta);
+$fila = mysqli_fetch_array($ejecutarConsulta);
+if(!$ejecutarConsulta){
+    echo "Error en la consulta";
+
+}else{
+    if($verFilas < 1){
+        echo "<tr><td> Sin registros </td> </tr>";
+    }
+    else{
+        for($i = 0 ; $i <= $fila ; $i++){
+            echo '
+            <tr>
+                <td>'.$fila[0] .'</td>
+                <td>'.$fila[1] .'</td>
+                <td>'.$fila[2] .'</td>
+                <td>'.$fila[3] .'</td>
+                <td>'.$fila[4] .'</td>
+                <td>'.$fila[5] .'</td>
+                <td>'. $fila[6].'</td>
+
+            </tr>
+            ';
+            $fila = mysqli_fetch_array($ejecutarConsulta);
+        }
+    }
+}
+
+
+
+
 include "includes/pie.php";
-?>
+
+
