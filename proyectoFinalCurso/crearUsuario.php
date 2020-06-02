@@ -39,7 +39,7 @@ include "includes/cabecera.php";
   <div class="col-sm-12 " >
       <div class="form-check">
  
-        <input id="checkbox" class=" form-check-input " type="checkbox"> <label class=" form-check-label ml-4" for="checkbox" > Aceptar terminos y condiciones de registro</label>
+        <input id="checkbox" class=" form-check-input " type="checkbox" name="terminos"> <label class=" form-check-label ml-4" for="checkbox" > Aceptar terminos y condiciones de registro</label>
 
       </div>
     </div>

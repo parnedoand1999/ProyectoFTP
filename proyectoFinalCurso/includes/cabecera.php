@@ -1,3 +1,6 @@
+<?php
+session_Start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -53,40 +56,59 @@
 
 <body>
 
-            <header>
-                    <div class="jumbotron text-center bg-secondary" style="margin-bottom:0">
-            
-                        <div>
-                            <a href="index.php" tabindex="2"> <img id="logo" src="img/logo.jpg" alt="Pagina Principal" /> </a>
-                        </div>
-                        <p>¡No esperes más tiempo! Visite nuestra pagina web sobre la mejor saga de videojuegos de la historia!
-                        </p>
-                    </div>
-            
-            <?php
+    <header>
+        <div class="jumbotron text-center bg-secondary" style="margin-bottom:0">
 
-                    echo '  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
-                    <a class="navbar-brand" href="#">Menú</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="info.php">Información</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="tienda.php">Tienda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Foro</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="iniciarsesion.php">Iniciar Sesión</a>
-                            </li>
-                        </ul>
-                    </div>
-                    </nav> '
-            ?>
-            </header>
-         
+            <div>
+                <a href="index.php" tabindex="2"> <img id="logo" src="img/logo.jpg" alt="Pagina Principal" /> </a>
+            </div>
+            <p>¡No esperes más tiempo! Visite nuestra pagina web sobre la mejor saga de videojuegos de la historia!
+            </p>
+        </div>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">Menú</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.php">Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.php">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Foro</a>
+                    </li>
+                    <li class="nav-item">
+                        <?php 
+                        if(isset($_SESSION['usuario_loged'])) /*Si la sesión está iniciad: accede al peril si no, al formulario de inicio */
+                        {
+                            $ruta = "<a class='nav-link' href='perfil.php' ><strong> ". $_SESSION['usuario_loged'] ."</strong></a>";
+                        }
+                        else
+                        {
+                            $ruta =  "<a class='nav-link' href='iniciarsesion.php'>Iniciar Sesión</a>";
+                        }
+
+                        echo $ruta;
+                        
+                        ?>
+                       
+                        
+                    </li>
+
+                    <?php 
+                        if(isset($_SESSION['usuario_loged'])) /*Si la sesión está iniciada acceso al cierre de sesión */
+                        {
+                            echo ' <li class="nav-item">';
+                            echo "<a class='nav-link' href='logout.php'>Salir</a>";
+                            echo '</li>';                           
+                        }
+                        
+                        ?>
+                </ul>
+            </div>
+        </nav>

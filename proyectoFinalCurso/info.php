@@ -1,8 +1,9 @@
 <?php
 include "includes/cabecera.php";
+
 ?>
 
-<main>
+<main class="container-fluid">
 
 <section class="container">
 
