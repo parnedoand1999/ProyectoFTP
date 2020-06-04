@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2020 a las 19:12:56
+-- Tiempo de generación: 05-06-2020 a las 00:52:46
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -60,8 +60,26 @@ CREATE TABLE `productos` (
   `descripcion` text NOT NULL,
   `precio` double NOT NULL,
   `nombre_prod` varchar(40) NOT NULL,
-  `id_producto` int(11) NOT NULL
+  `id_producto` int(11) NOT NULL,
+  `categoria` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`imagen`, `descripcion`, `precio`, `nombre_prod`, `id_producto`, `categoria`) VALUES
+('kh1.jpg', 'Es el primer juego de la saga, introduce a los personajes en un mundo de aventuras', 15, 'Kingdom Hearth 1', 0, 'videojuegos'),
+('kh2.jpg', 'Es el segundo juego de la saga y en este se introducen nuevos personajes y nuevos mundos en los cuales Sora y sus amigos continuan con la aventura', 20, 'Kingdom Heath 2', 1, 'videojuegos'),
+('kh3.jpg', 'Este es el último juego de la saga hasta la fecha de hoy en el cual sora y sus amigos deberan luchar contra el villano principal de la saga para traer de vuelta el bien ', 38, 'Kingdom Hearth 3', 2, 'videojuegos'),
+('camisetaKH.jpg', 'Una camiseta con el dibujo de Sora, el personaje principal de la saga de Kingdom Hearth', 12, 'Camiseta  Sora', 3, 'ropa'),
+('sudaderaKH.jpg', 'Sudadera con el dibujo de la portada del primer juego de kingdom Hearth', 18, 'Sudadera Kingdom Hearth 1', 4, 'ropa'),
+('pantalonesKH.jpg', 'Pantalon con dos dibujos de Kingdom Hearth', 18, 'Pantalon Kingdom Hearth', 5, 'ropa'),
+('zapatillasKH.jpg', 'Las zapatillas que lleva Sora ', 25, 'Zapatillas de Sora', 6, 'ropa'),
+('funkoKH.jpg', 'Muñeco con la cabeza grande sobre Sora.', 30, 'Funko Sora', 7, 'accesorios'),
+('tazaKH.jpg', 'Taza ambientada en dibujos de Sora, Donald , Goofy  y Mickey.', 24, 'Taza Kingdom Hearth', 8, 'accesorios'),
+('llaveEspadaKH.jpg', 'La llave espada que usa Sora para coleccionistas', 40, 'Espada Sora', 9, 'accesorios'),
+('collarKH.jpg', 'Un collar ambientado en la corona de Sora', 37, 'Collar  corona Kingdom Hearth', 10, 'accesorios');
 
 -- --------------------------------------------------------
 
@@ -84,11 +102,13 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usuario`, `correo`, `contraseña`, `nombre`, `apellido`, `ciudad`, `codigo_postal`) VALUES
-('dssv', ' sdvdsvds@gmail.com', 'sdvdsv', 'sdvsv', 'sdvvs', 'sdvsdsv', 0),
-('iÃ±aki91', ' bujanson@gmai.com', 'bujanson', 'IÃ±aki', 'zagaztibeltza', 'Berriozar', 25255),
+('Carlos', ' carlanga@gmail.com', 'carlanga', 'Carlos', 'Arnedo', 'Pamplona', 31180),
+('Ibai', ' ibaiperez@gmail.com', 'perez', 'Ibai', 'Perez', 'Pamplona', 54872),
 ('javi199', ' pepe@gmail.com', 'pepe99', 'javier', 'perez', 'pamplona', 54789),
 ('jon', ' jonmostaza@gmail.com', 'mostaza', 'jon', 'mostaza', 'pamplona', 54780),
-('martinPJ', ' martinpj@gmail.com', '12345', 'Martin', 'Pajares', 'pamplona', 3104);
+('martinPJ', ' martinpj@gmail.com', '12345', 'Martin', 'Pajares', 'pamplona', 3104),
+('Merche', ' morozist@gmail.com', 'merche', 'Merche', 'Oroz', 'Pamplona', 25255),
+('peio', ' peioarnedo@gmail.com', 'arnedo99', 'Peio', 'Arnedo', 'Pamplona', 31180);
 
 --
 -- Índices para tablas volcadas
