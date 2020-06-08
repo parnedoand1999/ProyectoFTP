@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2020 a las 00:52:46
+-- Tiempo de generación: 08-06-2020 a las 14:18:11
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `compras` (
-  `id_fecha` date NOT NULL,
+  `id_fecha` datetime NOT NULL,
   `id_producto` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
-  `correo_usuario` varchar(40) NOT NULL
+  `usuario` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -44,9 +44,9 @@ CREATE TABLE `compras` (
 CREATE TABLE `foro` (
   `id_mensaje` int(11) NOT NULL,
   `titulo` varchar(40) NOT NULL,
-  `cuerpo_mensje` text NOT NULL,
-  `fecha` date NOT NULL,
-  `correo_usuario` varchar(40) NOT NULL
+  `cuerpo_mensaje` text NOT NULL,
+  `fecha` datetime NOT NULL,
+  `usuario` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -102,13 +102,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usuario`, `correo`, `contraseña`, `nombre`, `apellido`, `ciudad`, `codigo_postal`) VALUES
-('Carlos', ' carlanga@gmail.com', 'carlanga', 'Carlos', 'Arnedo', 'Pamplona', 31180),
-('Ibai', ' ibaiperez@gmail.com', 'perez', 'Ibai', 'Perez', 'Pamplona', 54872),
-('javi199', ' pepe@gmail.com', 'pepe99', 'javier', 'perez', 'pamplona', 54789),
-('jon', ' jonmostaza@gmail.com', 'mostaza', 'jon', 'mostaza', 'pamplona', 54780),
-('martinPJ', ' martinpj@gmail.com', '12345', 'Martin', 'Pajares', 'pamplona', 3104),
-('Merche', ' morozist@gmail.com', 'merche', 'Merche', 'Oroz', 'Pamplona', 25255),
-('peio', ' peioarnedo@gmail.com', 'arnedo99', 'Peio', 'Arnedo', 'Pamplona', 31180);
+('Peio', ' peioarnedo@gmail.com', 'arnedo', 'Peio', 'Arnedo', 'pamplona', 31180);
 
 --
 -- Índices para tablas volcadas
@@ -118,16 +112,16 @@ INSERT INTO `usuario` (`usuario`, `correo`, `contraseña`, `nombre`, `apellido`,
 -- Indices de la tabla `compras`
 --
 ALTER TABLE `compras`
-  ADD PRIMARY KEY (`id_fecha`,`id_producto`,`correo_usuario`) USING BTREE,
+  ADD PRIMARY KEY (`id_fecha`,`id_producto`,`usuario`) USING BTREE,
   ADD KEY `id_producto` (`id_producto`),
-  ADD KEY `correo_usuario` (`correo_usuario`);
+  ADD KEY `usuario` (`usuario`);
 
 --
 -- Indices de la tabla `foro`
 --
 ALTER TABLE `foro`
   ADD PRIMARY KEY (`id_mensaje`),
-  ADD KEY `correo_usuario` (`correo_usuario`);
+  ADD KEY `correo_usuario` (`usuario`);
 
 --
 -- Indices de la tabla `productos`
@@ -139,7 +133,7 @@ ALTER TABLE `productos`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`usuario`,`correo`),
+  ADD PRIMARY KEY (`usuario`) USING BTREE,
   ADD KEY `usuario` (`usuario`),
   ADD KEY `correo` (`correo`);
 
@@ -151,7 +145,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `foro`
 --
 ALTER TABLE `foro`
-  MODIFY `id_mensaje` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_mensaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
@@ -162,13 +156,13 @@ ALTER TABLE `foro`
 --
 ALTER TABLE `compras`
   ADD CONSTRAINT `FK_PRODUCTO:_ID` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`correo_usuario`) REFERENCES `usuario` (`correo`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `foro`
 --
 ALTER TABLE `foro`
-  ADD CONSTRAINT `foro_ibfk_1` FOREIGN KEY (`correo_usuario`) REFERENCES `usuario` (`correo`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `foro_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
