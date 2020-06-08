@@ -1,6 +1,6 @@
 <?php
 include "functions/connectDB.php";
-include "functions/helper.php";
+
 
 
 include "includes/cabecera.php";

@@ -1,6 +1,6 @@
 <?php
 include "includes/cabecera.php";
-include "functions/helper.php";
+
 
 
 if (!isset($_SESSION['usuario_loged'])) { //Si el usuario no está logueado, se le pide que se registro

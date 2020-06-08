@@ -5,7 +5,7 @@ session_Start();
 <html lang="es">
 
 <head>
-    <title>Kingdom Hearth Info-Store</title>
+    <title>Kingdom Hearts Info-Store</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

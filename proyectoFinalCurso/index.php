@@ -52,7 +52,7 @@ include "includes/cabecera.php";
 <div class="texto-bienvenida  ">
 
   <p>
-    ¡Bienvenido a nuestra página web Kingdom Hearth Info-Store! No se arrepentira de haber
+    ¡Bienvenido a nuestra página web Kingdom Hearts Info-Store! No se arrepentira de haber
     entrado , puede informarse, puede comprar y puede hacer muchas cosas mas.
   </p>
 

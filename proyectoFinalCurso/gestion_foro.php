@@ -1,7 +1,7 @@
 <?php
 include "includes/cabecera.php";
 include "functions/connectDB.php";
-include "functions/helper.php";
+
 
 
 if (isset($_POST['enviar'])) {

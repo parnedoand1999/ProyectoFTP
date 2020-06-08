@@ -6,10 +6,10 @@ if (!isset($_GET['id_producto']) || !is_numeric($_GET['id_producto'])) /*Se preg
     header("Location:404.php");
     exit();
 }
-
+/*Se pone los includes debajo del if porque sino da error la sesión */
 include "includes/cabecera.php";
 include "functions/connectDB.php";
-include "functions/helper.php";
+
 
 
 

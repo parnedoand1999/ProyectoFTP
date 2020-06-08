@@ -1,6 +1,6 @@
 <?php
 include "functions/connectDB.php";
-include "functions/helper.php";
+
 session_start();
 
 if (isset($_POST['reset']) && $_POST['reset'] == 'reset') {

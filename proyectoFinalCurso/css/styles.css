@@ -61,7 +61,6 @@ h5{
 }
 
 .card {
-    z-index: 0;
     margin-bottom: 1rem;
     animation: pulse 1000ms ease-out backwards;
 }

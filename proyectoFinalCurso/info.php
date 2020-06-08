@@ -10,7 +10,7 @@ include "includes/cabecera.php";
 
       <div class="row">
          <div class="col-12">
-            <h2 class="historia">La história de Kingdom Hearth:</h2>
+            <h2 class="historia">La história de Kingdom Hearts:</h2>
          </div>
 
          <div class="col-md-7">
@@ -208,7 +208,7 @@ include "includes/cabecera.php";
             <div class="card">
                <img src="img/kh1.jpg" class="card-img-top" alt="KH1">
                <div class="card-body">
-                  <h5 class="card-title">Kingdom Hearth 1</h5>
+                  <h5 class="card-title">Kingdom Hearts 1</h5>
                   <p class="card-text">En este juego se introdujeron la mayoría de los personajes principales 
                      de la serie y se estableció la trama de los corazones y los seres oscuros conocidos como "Sincorazón" 
                      (Heartless). Asimismo, se estableció el papel de los personajes de Disney en la serie, 
@@ -222,7 +222,7 @@ include "includes/cabecera.php";
             <div class="card">
                <img src="img/kh2.jpg" class="card-img-top" alt="KH2">
                <div class="card-body">
-                  <h5 class="card-title">Kingdom Hearth 2</h5>
+                  <h5 class="card-title">Kingdom Hearts 2</h5>
                   <p class="card-text">En el juego se sigue estudiando el concepto del “corazón”, 
                      agregándose como enemigos a los Incorpóreos (Nobodies) y la organización 13 que son incorpóreos pero los mas fuertes .</p>
                   <p class="card-text">El modo de juego es similar al del primer Kingdom Hearts con la adición de 
@@ -238,7 +238,7 @@ include "includes/cabecera.php";
             <div class="card">
                <img src="img/kh3.jpg" class="card-img-top" alt="KH3">
                <div class="card-body">
-                  <h5 class="card-title">Kingdom Hearth 3</h5>
+                  <h5 class="card-title">Kingdom Hearts 3</h5>
                   <p class="card-text"> Es el octavo título de la saga y está disponible para las plataformas PlayStation 4 
                      y Xbox One, desde el 29 de enero de 2019.​ Fue anunciado oficialmente en el E3 del 2013. Es el último juego 
                      y definitivo ya que en este se reunen todos los personajes buenos y malos de los anteriores juegos y se forma una batalla final. </p>
