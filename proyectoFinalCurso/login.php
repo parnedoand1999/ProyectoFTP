@@ -27,8 +27,6 @@ if (isset($_POST['iniciar'])) {
         header("Location: perfil.php", true); //Si el nicio es correcto, se redirige al perfil del usuario
         exit();
       }
-
-    
     }
   }
 }
@@ -37,4 +35,5 @@ include "includes/cabecera.php";
 echo "<div class='alert alert-danger'>Acceso incorrecto</div>";
 echo "<button onclick='window.history.back();' class='btn btn-danger'>Volver</button>";
 include "includes/pie.php";
+mysqli_close($conexion);
 exit();

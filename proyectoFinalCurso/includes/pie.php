@@ -1,4 +1,5 @@
 
+</main>
 <footer>
  <div class="jumbotron text-center bg-secondary " style="margin-bottom:0">
             <p>

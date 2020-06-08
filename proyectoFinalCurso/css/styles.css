@@ -1,29 +1,120 @@
-*{
-	margin: 0;
-	padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 
 }
-html{
-	
-	background-image: url("../img/fondoPagina.jpg");
-	background-position-x: -55px;
-	padding-top: 124px;
-	padding-bottom: 124px;
+
+html {
+    background-image: url("../img/fondoPagina.jpg");
+    background-position-x: -55px;
+    /* padding-top: 124px; */
+    padding-top: 2rem;
+    padding-bottom: 124px;
 }
-body{
-	max-width: 1100px;
-	
-	margin: 0 auto;
+
+body {
+    max-width: 1100px;
+
+    margin: 0 auto;
 }
-.texto-bienvenida{
-	text-align: center;
-	padding: 50px;
-	font-size: 2em;
+
+main {
+    padding: 0 0 2rem;
 }
-.cabecera{
-	background-color: black(49, 42, 42, 0.329);
+
+h2 {
+    margin-top: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #cacaca;
 }
-.col-12{
-	margin-bottom: 5px;
-	margin-top: 20px;
+
+h5{
+    margin-top:0;
+    font-weight:700;
+    font-size:20px;
+}
+
+.texto-bienvenida {
+    text-align: center;
+    padding: 50px;
+    font-size: 2em;
+}
+
+.cabecera {
+    background-color: black(49, 42, 42, 0.329);
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.row.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.col-12 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.card {
+    z-index: 0;
+    margin-bottom: 1rem;
+    animation: pulse 1000ms ease-out backwards;
+}
+
+.item-container .product-cat{
+    font-style:italic;
+    margin-bottom:1rem;
+    color:grey;
+}
+
+.item-container .product-price{
+    font-size:18px;
+    font-weight:700;
+}
+
+.product-form select{
+    display:inline-block;
+    width:200px;
+    height:34px;
+    font-size:1.5rem;
+}
+
+.modal-header{    
+    padding: 0 14px 7px;
+    background-color: #1c1c1c;
+    border-bottom:1px solid #000000;
+}
+
+.modal-header > button{
+    opacity:1;
+}
+
+.modal-header > button > span{
+    color:white;
+}
+
+.modal-body img{
+    width:100%;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        position: Relative;
+        top: -10rem;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
 }

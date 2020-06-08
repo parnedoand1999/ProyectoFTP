@@ -24,6 +24,7 @@ session_Start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+
     <link rel="stylesheet" href="css/styles.css">
 
 
@@ -49,7 +50,8 @@ session_Start();
     <meta name="theme-color" content="#ffffff">
 
     <!--Java Script -->
-    <script src="js/javascript.js"></script>
+    <script src="js/javascript.js"></script>    
+    <script src="js/carro.js"></script>
 
 </head>
 
@@ -80,7 +82,7 @@ session_Start();
                         <a class="nav-link" href="tienda.php">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Foro</a>
+                        <a class="nav-link" href="foro.php">Foro</a>
                     </li>
                     <li class="nav-item">
                         <?php 
@@ -109,6 +111,20 @@ session_Start();
                         }
                         
                         ?>
+
+<?php 
+                        if(isset($_SESSION['carrito'])) /*Si la sesión está iniciada acceso al cierre de sesión */
+                        {
+                            echo ' <li class="nav-item">';
+                            echo "<a class='nav-link' href='compra.php'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span> Carrito <span class='badge-pill badge-info' id='cart-container'>". count($_SESSION['carrito'])."</span></a> ";
+                            echo '</li>';                           
+                        }
+                        
+                        ?>
                 </ul>
             </div>
         </nav>
+
+    </header>
+
+    <main>

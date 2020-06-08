@@ -1,9 +1,14 @@
 <?php
 include "includes/cabecera.php";
 ?>
-<main class="container-fluid">
-    <h2>Un poco sobre nosotros:</h2>
+
+<div class="container-fluid">
     <div class="row">
+
+        <div class="col-12">
+
+            <h2>Un poco sobre nosotros:</h2>
+        </div>
         <div class="col-md-6 ">
             <div class="card">
                 <img src="img/empresa/logoEmpresa.png" class="card-img-top" alt="logo Empresa">
@@ -32,7 +37,9 @@ include "includes/cabecera.php";
         <div class="col-md-6">
             <div class="card">
 
-                <img src="img/empresa/ubicacion2.png" class="card-img-top " alt="logo Empresa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.758760097394!2d-1.6885292842962536!3d42.83570941292231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd508d43486e4a81%3A0x7a80bc2f09b46633!2s31013%20Pamplona%2C%20Navarra!5e0!3m2!1ses!2ses!4v1591487473585!5m2!1ses!2ses" width="100%" height="387" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <!-- <img src="img/empresa/ubicacion2.png" class="card-img-top " alt="logo Empresa"> -->
 
                 <div class="card-body">
                     <h3 class="card-title">Localidad de la empresa:</h3>
@@ -45,7 +52,9 @@ include "includes/cabecera.php";
         </div>
 
     </div>
-</main>
+
+</div>
+
 <?php
 include "includes/pie.php";
 ?>
