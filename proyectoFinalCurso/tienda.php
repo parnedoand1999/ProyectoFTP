@@ -1,6 +1,28 @@
 <?php
 include "includes/cabecera.php";
 include "functions/connectDB.php";
+
+if (!isset($_SESSION['usuario_loged'])) { //Si el usuario no está logueado, se le pide que se registro
+  $cadena = "<div class='container-fluid'>
+                  <div class='row'>
+                      <div class='col-12'>
+                          <h2>Acceso restringido</h2>
+                      </div>
+                      <div class='col-12'>
+                          <div class='alert alert-danger' role='alert'><strong>Registrate</strong> o <strong>incia sesión</stron> para acceder a la tienda. </div>
+                      </div>
+                      <div class='col-12'>
+                          <a href='crearUsuario.php' class='btn btn-primary float-right mx-2' ><span class='glyphicon glyphicon-user' aria-hidden='true'></span>  Acceder al registro </a>
+                          <a href='iniciarsesion.php' class='btn btn-default float-right mx-2' ><span class='glyphicon glyphicon-off' aria-hidden='true'></span>  Iniciar sesión </a>
+                      </div>
+                  </div>
+              </div>";
+
+  echo $cadena;
+  include "includes/pie.php";
+  exit(); // Termina la ejecución del script
+
+}
 function printProducto($producto, $numColumnas)
 {
   echo ' <div class="col-sm-6 col-md-' . $numColumnas . '"> 
